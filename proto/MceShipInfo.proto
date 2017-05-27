@@ -1,0 +1,10 @@
+syntax = "proto2";
+
+option java_package = "com.proto";
+
+//请求舰船信息
+
+message MceShipInfo 
+{
+	optional int64 oid   = 1;   
+}

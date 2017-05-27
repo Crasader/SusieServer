@@ -1,0 +1,12 @@
+syntax = "proto2";
+
+option java_package = "com.proto";
+option java_outer_classname = "TransScene";
+
+//场景传送
+message MseTransScene {
+	optional int32 scene_id = 1;
+	optional float x = 2;
+	optional float y = 3;
+	optional float d = 4;
+}

@@ -1,0 +1,9 @@
+syntax = "proto2";
+
+option java_package = "com.proto";
+option java_outer_classname = "Heartbeat";
+//·¢ËÍĞÄÌø
+
+message MceHeartbeat {
+    
+}

@@ -1,0 +1,24 @@
+syntax = "proto2";
+
+option java_package = "com.proto";
+option java_outer_classname = "Auth";
+//发送心跳
+
+message MceAuth {
+    optional string id   = 1 [default = ""];//名字
+    optional string pass = 2 ;
+}
+
+//登录
+
+message MseAuth {
+    optional string uid = 1;
+    optional bool  succ = 2;
+    optional bool  redirect = 3[default = false];
+    optional string redirect_port = 4 ;
+    optional string redirect_ip		= 5 ;
+    optional string redirect_pass = 6 ;
+    optional string name = 7;
+	optional bool   bIsNew = 8;
+	optional int32  nCamp = 9;//推荐的国家
+}
