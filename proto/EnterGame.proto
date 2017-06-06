@@ -1,0 +1,12 @@
+syntax = "proto2";
+
+option java_package = "com.proto";
+option java_outer_classname = "EnterGame";
+
+message MceEnterGame {
+	
+}
+
+message MseEnterGame {
+	
+}

@@ -1,0 +1,10 @@
+syntax = "proto2";
+
+option java_package = "com.proto";
+option java_outer_classname = "UserInfo";
+
+//发送玩家信息
+message MseUserInfo {    
+  	required string uid          = 1;
+	required string userName     = 2;
+}

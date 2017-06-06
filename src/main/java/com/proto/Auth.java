@@ -20,45 +20,61 @@ public final class Auth {
 
     /**
      * <pre>
-     *√˚◊÷
+     * Ë¥¶Âè∑Âêç
      * </pre>
      *
-     * <code>optional string id = 1 [default = ""];</code>
+     * <code>required string id = 1;</code>
      */
     boolean hasId();
     /**
      * <pre>
-     *√˚◊÷
+     * Ë¥¶Âè∑Âêç
      * </pre>
      *
-     * <code>optional string id = 1 [default = ""];</code>
+     * <code>required string id = 1;</code>
      */
     java.lang.String getId();
     /**
      * <pre>
-     *√˚◊÷
+     * Ë¥¶Âè∑Âêç
      * </pre>
      *
-     * <code>optional string id = 1 [default = ""];</code>
+     * <code>required string id = 1;</code>
      */
     com.google.protobuf.ByteString
         getIdBytes();
 
     /**
-     * <code>optional string pass = 2;</code>
+     * <pre>
+     * Ë¥¶Âè∑ÂØÜÁ†Å
+     * </pre>
+     *
+     * <code>required string pass = 2;</code>
      */
     boolean hasPass();
     /**
-     * <code>optional string pass = 2;</code>
+     * <pre>
+     * Ë¥¶Âè∑ÂØÜÁ†Å
+     * </pre>
+     *
+     * <code>required string pass = 2;</code>
      */
     java.lang.String getPass();
     /**
-     * <code>optional string pass = 2;</code>
+     * <pre>
+     * Ë¥¶Âè∑ÂØÜÁ†Å
+     * </pre>
+     *
+     * <code>required string pass = 2;</code>
      */
     com.google.protobuf.ByteString
         getPassBytes();
   }
   /**
+   * <pre>
+   * ÂøÉË∑≥
+   * </pre>
+   *
    * Protobuf type {@code MceAuth}
    */
   public  static final class MceAuth extends
@@ -143,20 +159,20 @@ public final class Auth {
     private volatile java.lang.Object id_;
     /**
      * <pre>
-     *√˚◊÷
+     * Ë¥¶Âè∑Âêç
      * </pre>
      *
-     * <code>optional string id = 1 [default = ""];</code>
+     * <code>required string id = 1;</code>
      */
     public boolean hasId() {
       return ((bitField0_ & 0x00000001) == 0x00000001);
     }
     /**
      * <pre>
-     *√˚◊÷
+     * Ë¥¶Âè∑Âêç
      * </pre>
      *
-     * <code>optional string id = 1 [default = ""];</code>
+     * <code>required string id = 1;</code>
      */
     public java.lang.String getId() {
       java.lang.Object ref = id_;
@@ -174,10 +190,10 @@ public final class Auth {
     }
     /**
      * <pre>
-     *√˚◊÷
+     * Ë¥¶Âè∑Âêç
      * </pre>
      *
-     * <code>optional string id = 1 [default = ""];</code>
+     * <code>required string id = 1;</code>
      */
     public com.google.protobuf.ByteString
         getIdBytes() {
@@ -196,13 +212,21 @@ public final class Auth {
     public static final int PASS_FIELD_NUMBER = 2;
     private volatile java.lang.Object pass_;
     /**
-     * <code>optional string pass = 2;</code>
+     * <pre>
+     * Ë¥¶Âè∑ÂØÜÁ†Å
+     * </pre>
+     *
+     * <code>required string pass = 2;</code>
      */
     public boolean hasPass() {
       return ((bitField0_ & 0x00000002) == 0x00000002);
     }
     /**
-     * <code>optional string pass = 2;</code>
+     * <pre>
+     * Ë¥¶Âè∑ÂØÜÁ†Å
+     * </pre>
+     *
+     * <code>required string pass = 2;</code>
      */
     public java.lang.String getPass() {
       java.lang.Object ref = pass_;
@@ -219,7 +243,11 @@ public final class Auth {
       }
     }
     /**
-     * <code>optional string pass = 2;</code>
+     * <pre>
+     * Ë¥¶Âè∑ÂØÜÁ†Å
+     * </pre>
+     *
+     * <code>required string pass = 2;</code>
      */
     public com.google.protobuf.ByteString
         getPassBytes() {
@@ -241,6 +269,14 @@ public final class Auth {
       if (isInitialized == 1) return true;
       if (isInitialized == 0) return false;
 
+      if (!hasId()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasPass()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
       memoizedIsInitialized = 1;
       return true;
     }
@@ -396,6 +432,10 @@ public final class Auth {
       return builder;
     }
     /**
+     * <pre>
+     * ÂøÉË∑≥
+     * </pre>
+     *
      * Protobuf type {@code MceAuth}
      */
     public static final class Builder extends
@@ -525,6 +565,12 @@ public final class Auth {
       }
 
       public final boolean isInitialized() {
+        if (!hasId()) {
+          return false;
+        }
+        if (!hasPass()) {
+          return false;
+        }
         return true;
       }
 
@@ -550,20 +596,20 @@ public final class Auth {
       private java.lang.Object id_ = "";
       /**
        * <pre>
-       *√˚◊÷
+       * Ë¥¶Âè∑Âêç
        * </pre>
        *
-       * <code>optional string id = 1 [default = ""];</code>
+       * <code>required string id = 1;</code>
        */
       public boolean hasId() {
         return ((bitField0_ & 0x00000001) == 0x00000001);
       }
       /**
        * <pre>
-       *√˚◊÷
+       * Ë¥¶Âè∑Âêç
        * </pre>
        *
-       * <code>optional string id = 1 [default = ""];</code>
+       * <code>required string id = 1;</code>
        */
       public java.lang.String getId() {
         java.lang.Object ref = id_;
@@ -581,10 +627,10 @@ public final class Auth {
       }
       /**
        * <pre>
-       *√˚◊÷
+       * Ë¥¶Âè∑Âêç
        * </pre>
        *
-       * <code>optional string id = 1 [default = ""];</code>
+       * <code>required string id = 1;</code>
        */
       public com.google.protobuf.ByteString
           getIdBytes() {
@@ -601,10 +647,10 @@ public final class Auth {
       }
       /**
        * <pre>
-       *√˚◊÷
+       * Ë¥¶Âè∑Âêç
        * </pre>
        *
-       * <code>optional string id = 1 [default = ""];</code>
+       * <code>required string id = 1;</code>
        */
       public Builder setId(
           java.lang.String value) {
@@ -618,10 +664,10 @@ public final class Auth {
       }
       /**
        * <pre>
-       *√˚◊÷
+       * Ë¥¶Âè∑Âêç
        * </pre>
        *
-       * <code>optional string id = 1 [default = ""];</code>
+       * <code>required string id = 1;</code>
        */
       public Builder clearId() {
         bitField0_ = (bitField0_ & ~0x00000001);
@@ -631,10 +677,10 @@ public final class Auth {
       }
       /**
        * <pre>
-       *√˚◊÷
+       * Ë¥¶Âè∑Âêç
        * </pre>
        *
-       * <code>optional string id = 1 [default = ""];</code>
+       * <code>required string id = 1;</code>
        */
       public Builder setIdBytes(
           com.google.protobuf.ByteString value) {
@@ -649,13 +695,21 @@ public final class Auth {
 
       private java.lang.Object pass_ = "";
       /**
-       * <code>optional string pass = 2;</code>
+       * <pre>
+       * Ë¥¶Âè∑ÂØÜÁ†Å
+       * </pre>
+       *
+       * <code>required string pass = 2;</code>
        */
       public boolean hasPass() {
         return ((bitField0_ & 0x00000002) == 0x00000002);
       }
       /**
-       * <code>optional string pass = 2;</code>
+       * <pre>
+       * Ë¥¶Âè∑ÂØÜÁ†Å
+       * </pre>
+       *
+       * <code>required string pass = 2;</code>
        */
       public java.lang.String getPass() {
         java.lang.Object ref = pass_;
@@ -672,7 +726,11 @@ public final class Auth {
         }
       }
       /**
-       * <code>optional string pass = 2;</code>
+       * <pre>
+       * Ë¥¶Âè∑ÂØÜÁ†Å
+       * </pre>
+       *
+       * <code>required string pass = 2;</code>
        */
       public com.google.protobuf.ByteString
           getPassBytes() {
@@ -688,7 +746,11 @@ public final class Auth {
         }
       }
       /**
-       * <code>optional string pass = 2;</code>
+       * <pre>
+       * Ë¥¶Âè∑ÂØÜÁ†Å
+       * </pre>
+       *
+       * <code>required string pass = 2;</code>
        */
       public Builder setPass(
           java.lang.String value) {
@@ -701,7 +763,11 @@ public final class Auth {
         return this;
       }
       /**
-       * <code>optional string pass = 2;</code>
+       * <pre>
+       * Ë¥¶Âè∑ÂØÜÁ†Å
+       * </pre>
+       *
+       * <code>required string pass = 2;</code>
        */
       public Builder clearPass() {
         bitField0_ = (bitField0_ & ~0x00000002);
@@ -710,7 +776,11 @@ public final class Auth {
         return this;
       }
       /**
-       * <code>optional string pass = 2;</code>
+       * <pre>
+       * Ë¥¶Âè∑ÂØÜÁ†Å
+       * </pre>
+       *
+       * <code>required string pass = 2;</code>
        */
       public Builder setPassBytes(
           com.google.protobuf.ByteString value) {
@@ -776,118 +846,27 @@ public final class Auth {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>optional string uid = 1;</code>
+     * <code>required string uid = 1;</code>
      */
     boolean hasUid();
     /**
-     * <code>optional string uid = 1;</code>
+     * <code>required string uid = 1;</code>
      */
     java.lang.String getUid();
     /**
-     * <code>optional string uid = 1;</code>
+     * <code>required string uid = 1;</code>
      */
     com.google.protobuf.ByteString
         getUidBytes();
 
     /**
-     * <code>optional bool succ = 2;</code>
+     * <code>required bool succ = 2;</code>
      */
     boolean hasSucc();
     /**
-     * <code>optional bool succ = 2;</code>
+     * <code>required bool succ = 2;</code>
      */
     boolean getSucc();
-
-    /**
-     * <code>optional bool redirect = 3 [default = false];</code>
-     */
-    boolean hasRedirect();
-    /**
-     * <code>optional bool redirect = 3 [default = false];</code>
-     */
-    boolean getRedirect();
-
-    /**
-     * <code>optional string redirect_port = 4;</code>
-     */
-    boolean hasRedirectPort();
-    /**
-     * <code>optional string redirect_port = 4;</code>
-     */
-    java.lang.String getRedirectPort();
-    /**
-     * <code>optional string redirect_port = 4;</code>
-     */
-    com.google.protobuf.ByteString
-        getRedirectPortBytes();
-
-    /**
-     * <code>optional string redirect_ip = 5;</code>
-     */
-    boolean hasRedirectIp();
-    /**
-     * <code>optional string redirect_ip = 5;</code>
-     */
-    java.lang.String getRedirectIp();
-    /**
-     * <code>optional string redirect_ip = 5;</code>
-     */
-    com.google.protobuf.ByteString
-        getRedirectIpBytes();
-
-    /**
-     * <code>optional string redirect_pass = 6;</code>
-     */
-    boolean hasRedirectPass();
-    /**
-     * <code>optional string redirect_pass = 6;</code>
-     */
-    java.lang.String getRedirectPass();
-    /**
-     * <code>optional string redirect_pass = 6;</code>
-     */
-    com.google.protobuf.ByteString
-        getRedirectPassBytes();
-
-    /**
-     * <code>optional string name = 7;</code>
-     */
-    boolean hasName();
-    /**
-     * <code>optional string name = 7;</code>
-     */
-    java.lang.String getName();
-    /**
-     * <code>optional string name = 7;</code>
-     */
-    com.google.protobuf.ByteString
-        getNameBytes();
-
-    /**
-     * <code>optional bool bIsNew = 8;</code>
-     */
-    boolean hasBIsNew();
-    /**
-     * <code>optional bool bIsNew = 8;</code>
-     */
-    boolean getBIsNew();
-
-    /**
-     * <pre>
-     *Õ∆ºˆµƒπ˙º“
-     * </pre>
-     *
-     * <code>optional int32 nCamp = 9;</code>
-     */
-    boolean hasNCamp();
-    /**
-     * <pre>
-     *Õ∆ºˆµƒπ˙º“
-     * </pre>
-     *
-     * <code>optional int32 nCamp = 9;</code>
-     */
-    int getNCamp();
   }
   /**
    * Protobuf type {@code MseAuth}
@@ -903,13 +882,6 @@ public final class Auth {
     private MseAuth() {
       uid_ = "";
       succ_ = false;
-      redirect_ = false;
-      redirectPort_ = "";
-      redirectIp_ = "";
-      redirectPass_ = "";
-      name_ = "";
-      bIsNew_ = false;
-      nCamp_ = 0;
     }
 
     @java.lang.Override
@@ -951,45 +923,6 @@ public final class Auth {
               succ_ = input.readBool();
               break;
             }
-            case 24: {
-              bitField0_ |= 0x00000004;
-              redirect_ = input.readBool();
-              break;
-            }
-            case 34: {
-              com.google.protobuf.ByteString bs = input.readBytes();
-              bitField0_ |= 0x00000008;
-              redirectPort_ = bs;
-              break;
-            }
-            case 42: {
-              com.google.protobuf.ByteString bs = input.readBytes();
-              bitField0_ |= 0x00000010;
-              redirectIp_ = bs;
-              break;
-            }
-            case 50: {
-              com.google.protobuf.ByteString bs = input.readBytes();
-              bitField0_ |= 0x00000020;
-              redirectPass_ = bs;
-              break;
-            }
-            case 58: {
-              com.google.protobuf.ByteString bs = input.readBytes();
-              bitField0_ |= 0x00000040;
-              name_ = bs;
-              break;
-            }
-            case 64: {
-              bitField0_ |= 0x00000080;
-              bIsNew_ = input.readBool();
-              break;
-            }
-            case 72: {
-              bitField0_ |= 0x00000100;
-              nCamp_ = input.readInt32();
-              break;
-            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -1018,13 +951,13 @@ public final class Auth {
     public static final int UID_FIELD_NUMBER = 1;
     private volatile java.lang.Object uid_;
     /**
-     * <code>optional string uid = 1;</code>
+     * <code>required string uid = 1;</code>
      */
     public boolean hasUid() {
       return ((bitField0_ & 0x00000001) == 0x00000001);
     }
     /**
-     * <code>optional string uid = 1;</code>
+     * <code>required string uid = 1;</code>
      */
     public java.lang.String getUid() {
       java.lang.Object ref = uid_;
@@ -1041,7 +974,7 @@ public final class Auth {
       }
     }
     /**
-     * <code>optional string uid = 1;</code>
+     * <code>required string uid = 1;</code>
      */
     public com.google.protobuf.ByteString
         getUidBytes() {
@@ -1060,237 +993,16 @@ public final class Auth {
     public static final int SUCC_FIELD_NUMBER = 2;
     private boolean succ_;
     /**
-     * <code>optional bool succ = 2;</code>
+     * <code>required bool succ = 2;</code>
      */
     public boolean hasSucc() {
       return ((bitField0_ & 0x00000002) == 0x00000002);
     }
     /**
-     * <code>optional bool succ = 2;</code>
+     * <code>required bool succ = 2;</code>
      */
     public boolean getSucc() {
       return succ_;
-    }
-
-    public static final int REDIRECT_FIELD_NUMBER = 3;
-    private boolean redirect_;
-    /**
-     * <code>optional bool redirect = 3 [default = false];</code>
-     */
-    public boolean hasRedirect() {
-      return ((bitField0_ & 0x00000004) == 0x00000004);
-    }
-    /**
-     * <code>optional bool redirect = 3 [default = false];</code>
-     */
-    public boolean getRedirect() {
-      return redirect_;
-    }
-
-    public static final int REDIRECT_PORT_FIELD_NUMBER = 4;
-    private volatile java.lang.Object redirectPort_;
-    /**
-     * <code>optional string redirect_port = 4;</code>
-     */
-    public boolean hasRedirectPort() {
-      return ((bitField0_ & 0x00000008) == 0x00000008);
-    }
-    /**
-     * <code>optional string redirect_port = 4;</code>
-     */
-    public java.lang.String getRedirectPort() {
-      java.lang.Object ref = redirectPort_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          redirectPort_ = s;
-        }
-        return s;
-      }
-    }
-    /**
-     * <code>optional string redirect_port = 4;</code>
-     */
-    public com.google.protobuf.ByteString
-        getRedirectPortBytes() {
-      java.lang.Object ref = redirectPort_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        redirectPort_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int REDIRECT_IP_FIELD_NUMBER = 5;
-    private volatile java.lang.Object redirectIp_;
-    /**
-     * <code>optional string redirect_ip = 5;</code>
-     */
-    public boolean hasRedirectIp() {
-      return ((bitField0_ & 0x00000010) == 0x00000010);
-    }
-    /**
-     * <code>optional string redirect_ip = 5;</code>
-     */
-    public java.lang.String getRedirectIp() {
-      java.lang.Object ref = redirectIp_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          redirectIp_ = s;
-        }
-        return s;
-      }
-    }
-    /**
-     * <code>optional string redirect_ip = 5;</code>
-     */
-    public com.google.protobuf.ByteString
-        getRedirectIpBytes() {
-      java.lang.Object ref = redirectIp_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        redirectIp_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int REDIRECT_PASS_FIELD_NUMBER = 6;
-    private volatile java.lang.Object redirectPass_;
-    /**
-     * <code>optional string redirect_pass = 6;</code>
-     */
-    public boolean hasRedirectPass() {
-      return ((bitField0_ & 0x00000020) == 0x00000020);
-    }
-    /**
-     * <code>optional string redirect_pass = 6;</code>
-     */
-    public java.lang.String getRedirectPass() {
-      java.lang.Object ref = redirectPass_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          redirectPass_ = s;
-        }
-        return s;
-      }
-    }
-    /**
-     * <code>optional string redirect_pass = 6;</code>
-     */
-    public com.google.protobuf.ByteString
-        getRedirectPassBytes() {
-      java.lang.Object ref = redirectPass_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        redirectPass_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int NAME_FIELD_NUMBER = 7;
-    private volatile java.lang.Object name_;
-    /**
-     * <code>optional string name = 7;</code>
-     */
-    public boolean hasName() {
-      return ((bitField0_ & 0x00000040) == 0x00000040);
-    }
-    /**
-     * <code>optional string name = 7;</code>
-     */
-    public java.lang.String getName() {
-      java.lang.Object ref = name_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          name_ = s;
-        }
-        return s;
-      }
-    }
-    /**
-     * <code>optional string name = 7;</code>
-     */
-    public com.google.protobuf.ByteString
-        getNameBytes() {
-      java.lang.Object ref = name_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        name_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int BISNEW_FIELD_NUMBER = 8;
-    private boolean bIsNew_;
-    /**
-     * <code>optional bool bIsNew = 8;</code>
-     */
-    public boolean hasBIsNew() {
-      return ((bitField0_ & 0x00000080) == 0x00000080);
-    }
-    /**
-     * <code>optional bool bIsNew = 8;</code>
-     */
-    public boolean getBIsNew() {
-      return bIsNew_;
-    }
-
-    public static final int NCAMP_FIELD_NUMBER = 9;
-    private int nCamp_;
-    /**
-     * <pre>
-     *Õ∆ºˆµƒπ˙º“
-     * </pre>
-     *
-     * <code>optional int32 nCamp = 9;</code>
-     */
-    public boolean hasNCamp() {
-      return ((bitField0_ & 0x00000100) == 0x00000100);
-    }
-    /**
-     * <pre>
-     *Õ∆ºˆµƒπ˙º“
-     * </pre>
-     *
-     * <code>optional int32 nCamp = 9;</code>
-     */
-    public int getNCamp() {
-      return nCamp_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -1299,6 +1011,14 @@ public final class Auth {
       if (isInitialized == 1) return true;
       if (isInitialized == 0) return false;
 
+      if (!hasUid()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasSucc()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
       memoizedIsInitialized = 1;
       return true;
     }
@@ -1310,27 +1030,6 @@ public final class Auth {
       }
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
         output.writeBool(2, succ_);
-      }
-      if (((bitField0_ & 0x00000004) == 0x00000004)) {
-        output.writeBool(3, redirect_);
-      }
-      if (((bitField0_ & 0x00000008) == 0x00000008)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, redirectPort_);
-      }
-      if (((bitField0_ & 0x00000010) == 0x00000010)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, redirectIp_);
-      }
-      if (((bitField0_ & 0x00000020) == 0x00000020)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 6, redirectPass_);
-      }
-      if (((bitField0_ & 0x00000040) == 0x00000040)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 7, name_);
-      }
-      if (((bitField0_ & 0x00000080) == 0x00000080)) {
-        output.writeBool(8, bIsNew_);
-      }
-      if (((bitField0_ & 0x00000100) == 0x00000100)) {
-        output.writeInt32(9, nCamp_);
       }
       unknownFields.writeTo(output);
     }
@@ -1346,30 +1045,6 @@ public final class Auth {
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(2, succ_);
-      }
-      if (((bitField0_ & 0x00000004) == 0x00000004)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(3, redirect_);
-      }
-      if (((bitField0_ & 0x00000008) == 0x00000008)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, redirectPort_);
-      }
-      if (((bitField0_ & 0x00000010) == 0x00000010)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, redirectIp_);
-      }
-      if (((bitField0_ & 0x00000020) == 0x00000020)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, redirectPass_);
-      }
-      if (((bitField0_ & 0x00000040) == 0x00000040)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, name_);
-      }
-      if (((bitField0_ & 0x00000080) == 0x00000080)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(8, bIsNew_);
-      }
-      if (((bitField0_ & 0x00000100) == 0x00000100)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(9, nCamp_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -1398,41 +1073,6 @@ public final class Auth {
         result = result && (getSucc()
             == other.getSucc());
       }
-      result = result && (hasRedirect() == other.hasRedirect());
-      if (hasRedirect()) {
-        result = result && (getRedirect()
-            == other.getRedirect());
-      }
-      result = result && (hasRedirectPort() == other.hasRedirectPort());
-      if (hasRedirectPort()) {
-        result = result && getRedirectPort()
-            .equals(other.getRedirectPort());
-      }
-      result = result && (hasRedirectIp() == other.hasRedirectIp());
-      if (hasRedirectIp()) {
-        result = result && getRedirectIp()
-            .equals(other.getRedirectIp());
-      }
-      result = result && (hasRedirectPass() == other.hasRedirectPass());
-      if (hasRedirectPass()) {
-        result = result && getRedirectPass()
-            .equals(other.getRedirectPass());
-      }
-      result = result && (hasName() == other.hasName());
-      if (hasName()) {
-        result = result && getName()
-            .equals(other.getName());
-      }
-      result = result && (hasBIsNew() == other.hasBIsNew());
-      if (hasBIsNew()) {
-        result = result && (getBIsNew()
-            == other.getBIsNew());
-      }
-      result = result && (hasNCamp() == other.hasNCamp());
-      if (hasNCamp()) {
-        result = result && (getNCamp()
-            == other.getNCamp());
-      }
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -1452,36 +1092,6 @@ public final class Auth {
         hash = (37 * hash) + SUCC_FIELD_NUMBER;
         hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
             getSucc());
-      }
-      if (hasRedirect()) {
-        hash = (37 * hash) + REDIRECT_FIELD_NUMBER;
-        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-            getRedirect());
-      }
-      if (hasRedirectPort()) {
-        hash = (37 * hash) + REDIRECT_PORT_FIELD_NUMBER;
-        hash = (53 * hash) + getRedirectPort().hashCode();
-      }
-      if (hasRedirectIp()) {
-        hash = (37 * hash) + REDIRECT_IP_FIELD_NUMBER;
-        hash = (53 * hash) + getRedirectIp().hashCode();
-      }
-      if (hasRedirectPass()) {
-        hash = (37 * hash) + REDIRECT_PASS_FIELD_NUMBER;
-        hash = (53 * hash) + getRedirectPass().hashCode();
-      }
-      if (hasName()) {
-        hash = (37 * hash) + NAME_FIELD_NUMBER;
-        hash = (53 * hash) + getName().hashCode();
-      }
-      if (hasBIsNew()) {
-        hash = (37 * hash) + BISNEW_FIELD_NUMBER;
-        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-            getBIsNew());
-      }
-      if (hasNCamp()) {
-        hash = (37 * hash) + NCAMP_FIELD_NUMBER;
-        hash = (53 * hash) + getNCamp();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -1605,20 +1215,6 @@ public final class Auth {
         bitField0_ = (bitField0_ & ~0x00000001);
         succ_ = false;
         bitField0_ = (bitField0_ & ~0x00000002);
-        redirect_ = false;
-        bitField0_ = (bitField0_ & ~0x00000004);
-        redirectPort_ = "";
-        bitField0_ = (bitField0_ & ~0x00000008);
-        redirectIp_ = "";
-        bitField0_ = (bitField0_ & ~0x00000010);
-        redirectPass_ = "";
-        bitField0_ = (bitField0_ & ~0x00000020);
-        name_ = "";
-        bitField0_ = (bitField0_ & ~0x00000040);
-        bIsNew_ = false;
-        bitField0_ = (bitField0_ & ~0x00000080);
-        nCamp_ = 0;
-        bitField0_ = (bitField0_ & ~0x00000100);
         return this;
       }
 
@@ -1651,34 +1247,6 @@ public final class Auth {
           to_bitField0_ |= 0x00000002;
         }
         result.succ_ = succ_;
-        if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
-          to_bitField0_ |= 0x00000004;
-        }
-        result.redirect_ = redirect_;
-        if (((from_bitField0_ & 0x00000008) == 0x00000008)) {
-          to_bitField0_ |= 0x00000008;
-        }
-        result.redirectPort_ = redirectPort_;
-        if (((from_bitField0_ & 0x00000010) == 0x00000010)) {
-          to_bitField0_ |= 0x00000010;
-        }
-        result.redirectIp_ = redirectIp_;
-        if (((from_bitField0_ & 0x00000020) == 0x00000020)) {
-          to_bitField0_ |= 0x00000020;
-        }
-        result.redirectPass_ = redirectPass_;
-        if (((from_bitField0_ & 0x00000040) == 0x00000040)) {
-          to_bitField0_ |= 0x00000040;
-        }
-        result.name_ = name_;
-        if (((from_bitField0_ & 0x00000080) == 0x00000080)) {
-          to_bitField0_ |= 0x00000080;
-        }
-        result.bIsNew_ = bIsNew_;
-        if (((from_bitField0_ & 0x00000100) == 0x00000100)) {
-          to_bitField0_ |= 0x00000100;
-        }
-        result.nCamp_ = nCamp_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -1729,41 +1297,18 @@ public final class Auth {
         if (other.hasSucc()) {
           setSucc(other.getSucc());
         }
-        if (other.hasRedirect()) {
-          setRedirect(other.getRedirect());
-        }
-        if (other.hasRedirectPort()) {
-          bitField0_ |= 0x00000008;
-          redirectPort_ = other.redirectPort_;
-          onChanged();
-        }
-        if (other.hasRedirectIp()) {
-          bitField0_ |= 0x00000010;
-          redirectIp_ = other.redirectIp_;
-          onChanged();
-        }
-        if (other.hasRedirectPass()) {
-          bitField0_ |= 0x00000020;
-          redirectPass_ = other.redirectPass_;
-          onChanged();
-        }
-        if (other.hasName()) {
-          bitField0_ |= 0x00000040;
-          name_ = other.name_;
-          onChanged();
-        }
-        if (other.hasBIsNew()) {
-          setBIsNew(other.getBIsNew());
-        }
-        if (other.hasNCamp()) {
-          setNCamp(other.getNCamp());
-        }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
 
       public final boolean isInitialized() {
+        if (!hasUid()) {
+          return false;
+        }
+        if (!hasSucc()) {
+          return false;
+        }
         return true;
       }
 
@@ -1788,13 +1333,13 @@ public final class Auth {
 
       private java.lang.Object uid_ = "";
       /**
-       * <code>optional string uid = 1;</code>
+       * <code>required string uid = 1;</code>
        */
       public boolean hasUid() {
         return ((bitField0_ & 0x00000001) == 0x00000001);
       }
       /**
-       * <code>optional string uid = 1;</code>
+       * <code>required string uid = 1;</code>
        */
       public java.lang.String getUid() {
         java.lang.Object ref = uid_;
@@ -1811,7 +1356,7 @@ public final class Auth {
         }
       }
       /**
-       * <code>optional string uid = 1;</code>
+       * <code>required string uid = 1;</code>
        */
       public com.google.protobuf.ByteString
           getUidBytes() {
@@ -1827,7 +1372,7 @@ public final class Auth {
         }
       }
       /**
-       * <code>optional string uid = 1;</code>
+       * <code>required string uid = 1;</code>
        */
       public Builder setUid(
           java.lang.String value) {
@@ -1840,7 +1385,7 @@ public final class Auth {
         return this;
       }
       /**
-       * <code>optional string uid = 1;</code>
+       * <code>required string uid = 1;</code>
        */
       public Builder clearUid() {
         bitField0_ = (bitField0_ & ~0x00000001);
@@ -1849,7 +1394,7 @@ public final class Auth {
         return this;
       }
       /**
-       * <code>optional string uid = 1;</code>
+       * <code>required string uid = 1;</code>
        */
       public Builder setUidBytes(
           com.google.protobuf.ByteString value) {
@@ -1864,19 +1409,19 @@ public final class Auth {
 
       private boolean succ_ ;
       /**
-       * <code>optional bool succ = 2;</code>
+       * <code>required bool succ = 2;</code>
        */
       public boolean hasSucc() {
         return ((bitField0_ & 0x00000002) == 0x00000002);
       }
       /**
-       * <code>optional bool succ = 2;</code>
+       * <code>required bool succ = 2;</code>
        */
       public boolean getSucc() {
         return succ_;
       }
       /**
-       * <code>optional bool succ = 2;</code>
+       * <code>required bool succ = 2;</code>
        */
       public Builder setSucc(boolean value) {
         bitField0_ |= 0x00000002;
@@ -1885,427 +1430,11 @@ public final class Auth {
         return this;
       }
       /**
-       * <code>optional bool succ = 2;</code>
+       * <code>required bool succ = 2;</code>
        */
       public Builder clearSucc() {
         bitField0_ = (bitField0_ & ~0x00000002);
         succ_ = false;
-        onChanged();
-        return this;
-      }
-
-      private boolean redirect_ ;
-      /**
-       * <code>optional bool redirect = 3 [default = false];</code>
-       */
-      public boolean hasRedirect() {
-        return ((bitField0_ & 0x00000004) == 0x00000004);
-      }
-      /**
-       * <code>optional bool redirect = 3 [default = false];</code>
-       */
-      public boolean getRedirect() {
-        return redirect_;
-      }
-      /**
-       * <code>optional bool redirect = 3 [default = false];</code>
-       */
-      public Builder setRedirect(boolean value) {
-        bitField0_ |= 0x00000004;
-        redirect_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional bool redirect = 3 [default = false];</code>
-       */
-      public Builder clearRedirect() {
-        bitField0_ = (bitField0_ & ~0x00000004);
-        redirect_ = false;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object redirectPort_ = "";
-      /**
-       * <code>optional string redirect_port = 4;</code>
-       */
-      public boolean hasRedirectPort() {
-        return ((bitField0_ & 0x00000008) == 0x00000008);
-      }
-      /**
-       * <code>optional string redirect_port = 4;</code>
-       */
-      public java.lang.String getRedirectPort() {
-        java.lang.Object ref = redirectPort_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            redirectPort_ = s;
-          }
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>optional string redirect_port = 4;</code>
-       */
-      public com.google.protobuf.ByteString
-          getRedirectPortBytes() {
-        java.lang.Object ref = redirectPort_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          redirectPort_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>optional string redirect_port = 4;</code>
-       */
-      public Builder setRedirectPort(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000008;
-        redirectPort_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional string redirect_port = 4;</code>
-       */
-      public Builder clearRedirectPort() {
-        bitField0_ = (bitField0_ & ~0x00000008);
-        redirectPort_ = getDefaultInstance().getRedirectPort();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional string redirect_port = 4;</code>
-       */
-      public Builder setRedirectPortBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000008;
-        redirectPort_ = value;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object redirectIp_ = "";
-      /**
-       * <code>optional string redirect_ip = 5;</code>
-       */
-      public boolean hasRedirectIp() {
-        return ((bitField0_ & 0x00000010) == 0x00000010);
-      }
-      /**
-       * <code>optional string redirect_ip = 5;</code>
-       */
-      public java.lang.String getRedirectIp() {
-        java.lang.Object ref = redirectIp_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            redirectIp_ = s;
-          }
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>optional string redirect_ip = 5;</code>
-       */
-      public com.google.protobuf.ByteString
-          getRedirectIpBytes() {
-        java.lang.Object ref = redirectIp_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          redirectIp_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>optional string redirect_ip = 5;</code>
-       */
-      public Builder setRedirectIp(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000010;
-        redirectIp_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional string redirect_ip = 5;</code>
-       */
-      public Builder clearRedirectIp() {
-        bitField0_ = (bitField0_ & ~0x00000010);
-        redirectIp_ = getDefaultInstance().getRedirectIp();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional string redirect_ip = 5;</code>
-       */
-      public Builder setRedirectIpBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000010;
-        redirectIp_ = value;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object redirectPass_ = "";
-      /**
-       * <code>optional string redirect_pass = 6;</code>
-       */
-      public boolean hasRedirectPass() {
-        return ((bitField0_ & 0x00000020) == 0x00000020);
-      }
-      /**
-       * <code>optional string redirect_pass = 6;</code>
-       */
-      public java.lang.String getRedirectPass() {
-        java.lang.Object ref = redirectPass_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            redirectPass_ = s;
-          }
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>optional string redirect_pass = 6;</code>
-       */
-      public com.google.protobuf.ByteString
-          getRedirectPassBytes() {
-        java.lang.Object ref = redirectPass_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          redirectPass_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>optional string redirect_pass = 6;</code>
-       */
-      public Builder setRedirectPass(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000020;
-        redirectPass_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional string redirect_pass = 6;</code>
-       */
-      public Builder clearRedirectPass() {
-        bitField0_ = (bitField0_ & ~0x00000020);
-        redirectPass_ = getDefaultInstance().getRedirectPass();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional string redirect_pass = 6;</code>
-       */
-      public Builder setRedirectPassBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000020;
-        redirectPass_ = value;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object name_ = "";
-      /**
-       * <code>optional string name = 7;</code>
-       */
-      public boolean hasName() {
-        return ((bitField0_ & 0x00000040) == 0x00000040);
-      }
-      /**
-       * <code>optional string name = 7;</code>
-       */
-      public java.lang.String getName() {
-        java.lang.Object ref = name_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            name_ = s;
-          }
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>optional string name = 7;</code>
-       */
-      public com.google.protobuf.ByteString
-          getNameBytes() {
-        java.lang.Object ref = name_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          name_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>optional string name = 7;</code>
-       */
-      public Builder setName(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000040;
-        name_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional string name = 7;</code>
-       */
-      public Builder clearName() {
-        bitField0_ = (bitField0_ & ~0x00000040);
-        name_ = getDefaultInstance().getName();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional string name = 7;</code>
-       */
-      public Builder setNameBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000040;
-        name_ = value;
-        onChanged();
-        return this;
-      }
-
-      private boolean bIsNew_ ;
-      /**
-       * <code>optional bool bIsNew = 8;</code>
-       */
-      public boolean hasBIsNew() {
-        return ((bitField0_ & 0x00000080) == 0x00000080);
-      }
-      /**
-       * <code>optional bool bIsNew = 8;</code>
-       */
-      public boolean getBIsNew() {
-        return bIsNew_;
-      }
-      /**
-       * <code>optional bool bIsNew = 8;</code>
-       */
-      public Builder setBIsNew(boolean value) {
-        bitField0_ |= 0x00000080;
-        bIsNew_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional bool bIsNew = 8;</code>
-       */
-      public Builder clearBIsNew() {
-        bitField0_ = (bitField0_ & ~0x00000080);
-        bIsNew_ = false;
-        onChanged();
-        return this;
-      }
-
-      private int nCamp_ ;
-      /**
-       * <pre>
-       *Õ∆ºˆµƒπ˙º“
-       * </pre>
-       *
-       * <code>optional int32 nCamp = 9;</code>
-       */
-      public boolean hasNCamp() {
-        return ((bitField0_ & 0x00000100) == 0x00000100);
-      }
-      /**
-       * <pre>
-       *Õ∆ºˆµƒπ˙º“
-       * </pre>
-       *
-       * <code>optional int32 nCamp = 9;</code>
-       */
-      public int getNCamp() {
-        return nCamp_;
-      }
-      /**
-       * <pre>
-       *Õ∆ºˆµƒπ˙º“
-       * </pre>
-       *
-       * <code>optional int32 nCamp = 9;</code>
-       */
-      public Builder setNCamp(int value) {
-        bitField0_ |= 0x00000100;
-        nCamp_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       *Õ∆ºˆµƒπ˙º“
-       * </pre>
-       *
-       * <code>optional int32 nCamp = 9;</code>
-       */
-      public Builder clearNCamp() {
-        bitField0_ = (bitField0_ & ~0x00000100);
-        nCamp_ = 0;
         onChanged();
         return this;
       }
@@ -2377,13 +1506,9 @@ public final class Auth {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\nAuth.proto\"%\n\007MceAuth\022\014\n\002id\030\001 \001(\t:\000\022\014\n" +
-      "\004pass\030\002 \001(\t\"\255\001\n\007MseAuth\022\013\n\003uid\030\001 \001(\t\022\014\n\004" +
-      "succ\030\002 \001(\010\022\027\n\010redirect\030\003 \001(\010:\005false\022\025\n\rr" +
-      "edirect_port\030\004 \001(\t\022\023\n\013redirect_ip\030\005 \001(\t\022" +
-      "\025\n\rredirect_pass\030\006 \001(\t\022\014\n\004name\030\007 \001(\t\022\016\n\006" +
-      "bIsNew\030\010 \001(\010\022\r\n\005nCamp\030\t \001(\005B\021\n\tcom.proto" +
-      "B\004Auth"
+      "\n\nAuth.proto\"#\n\007MceAuth\022\n\n\002id\030\001 \002(\t\022\014\n\004p" +
+      "ass\030\002 \002(\t\"$\n\007MseAuth\022\013\n\003uid\030\001 \002(\t\022\014\n\004suc" +
+      "c\030\002 \002(\010B\021\n\tcom.protoB\004Auth"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -2408,7 +1533,7 @@ public final class Auth {
     internal_static_MseAuth_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_MseAuth_descriptor,
-        new java.lang.String[] { "Uid", "Succ", "Redirect", "RedirectPort", "RedirectIp", "RedirectPass", "Name", "BIsNew", "NCamp", });
+        new java.lang.String[] { "Uid", "Succ", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

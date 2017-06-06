@@ -1,1 +1,1 @@
-protoc -I ./proto/ --java_out=./src/ ./proto/*.proto 
+protoc -I ./proto/ --java_out=./src/main/java/ ./proto/*.proto 

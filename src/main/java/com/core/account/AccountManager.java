@@ -26,6 +26,17 @@ public class AccountManager {
 		return accountDataMap.get(ctxName);
 	}
 	
+	public String getUIDByCtx(ChannelHandlerContext ctx){
+		if (null == ctx){
+			return "null ctx";
+		}
+		AccountData data = getByCtxName(ctx.name());
+		if(null == data){
+			return "can't find account";
+		}
+		return data.getUid();
+	}
+	
 	public AccountData addCtx(ChannelHandlerContext ctx , String uid){
 		if (isHasData(ctx.name())) {
 			SSLog.Error("add the same ctx , ctx name = " + ctx.name());
@@ -42,7 +53,7 @@ public class AccountManager {
 	
 	public void closeCtx(ChannelHandlerContext ctx){
 		AccountData data = getByCtxName(ctx.name());
-		System.out.println("closeCtx:"+ctx.name());
+		System.out.println("closeCtx:"+data.getUid());
 		if (null != data) {
 			data.close();
 			accountDataMap.remove(ctx.name());

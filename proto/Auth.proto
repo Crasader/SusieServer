@@ -2,23 +2,13 @@ syntax = "proto2";
 
 option java_package = "com.proto";
 option java_outer_classname = "Auth";
-//·¢ËÍĞÄÌø
-
+// å¿ƒè·³
 message MceAuth {
-    optional string id   = 1 [default = ""];//Ãû×Ö
-    optional string pass = 2 ;
+    required string id   = 1 ;   // è´¦å·å
+    required string pass = 2 ;	 // è´¦å·å¯†ç 
 }
 
-//µÇÂ¼
-
 message MseAuth {
-    optional string uid = 1;
-    optional bool  succ = 2;
-    optional bool  redirect = 3[default = false];
-    optional string redirect_port = 4 ;
-    optional string redirect_ip		= 5 ;
-    optional string redirect_pass = 6 ;
-    optional string name = 7;
-	optional bool   bIsNew = 8;
-	optional int32  nCamp = 9;//ÍÆ¼öµÄ¹ú¼Ò
+    required string uid = 1;
+    required bool  succ = 2;
 }

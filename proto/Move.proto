@@ -1,0 +1,12 @@
+syntax = "proto2";
+
+option java_package = "com.proto";
+option java_outer_classname = "Move";
+
+// 移动
+message MseMove {    
+	required int32 x      = 1;
+	required int32 y      = 2; 
+	required int32 degree = 3; // 角度
+
+}

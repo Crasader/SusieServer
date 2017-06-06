@@ -1,8 +1,11 @@
 package com;
 
+import java.net.UnknownHostException;
+
 import com.core.ServerCore;
+import com.game.GameProtoToID;
+import com.game.db.DBManager;
 import com.game.model.ModelManager;
-import com.proto.GameProtoToID;
 
 public class MyServer {
 	private static boolean isRun = false;
@@ -29,10 +32,13 @@ public class MyServer {
 	
 	public static void stopMainThread(){
 		isRun = false;
+		DBManager.getInstance().stop();
 	}
-	public static void main(String[] args){
+	public static void main(String[] args) throws UnknownHostException{
 		// TODO Auto-generated method stub
 		ServerCore sc = ServerCore.getInstance();
+		// 数据库启动
+		DBManager.getInstance().start();
 		// 模块启动
 		ModelManager.getInstance().init();
 		
