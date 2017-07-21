@@ -15,60 +15,60 @@ public final class Control {
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
   /**
-   * Protobuf enum {@code E_Ctrl}
+   * Protobuf enum {@code E_DIR}
    */
-  public enum E_Ctrl
+  public enum E_DIR
       implements com.google.protobuf.ProtocolMessageEnum {
     /**
      * <pre>
-     *按了左键
+     *左移动
      * </pre>
      *
-     * <code>Left = 1;</code>
+     * <code>LEFT = 1;</code>
      */
-    Left(1),
+    LEFT(1),
     /**
      * <pre>
-     *按了右键
+     *右移动
      * </pre>
      *
-     * <code>Right = 2;</code>
+     * <code>RIGHT = 2;</code>
      */
-    Right(2),
+    RIGHT(2),
     /**
      * <pre>
-     *射击键
+     *回中
      * </pre>
      *
-     * <code>Shoot = 3;</code>
+     * <code>CENTER = 3;</code>
      */
-    Shoot(3),
+    CENTER(3),
     ;
 
     /**
      * <pre>
-     *按了左键
+     *左移动
      * </pre>
      *
-     * <code>Left = 1;</code>
+     * <code>LEFT = 1;</code>
      */
-    public static final int Left_VALUE = 1;
+    public static final int LEFT_VALUE = 1;
     /**
      * <pre>
-     *按了右键
+     *右移动
      * </pre>
      *
-     * <code>Right = 2;</code>
+     * <code>RIGHT = 2;</code>
      */
-    public static final int Right_VALUE = 2;
+    public static final int RIGHT_VALUE = 2;
     /**
      * <pre>
-     *射击键
+     *回中
      * </pre>
      *
-     * <code>Shoot = 3;</code>
+     * <code>CENTER = 3;</code>
      */
-    public static final int Shoot_VALUE = 3;
+    public static final int CENTER_VALUE = 3;
 
 
     public final int getNumber() {
@@ -79,28 +79,28 @@ public final class Control {
      * @deprecated Use {@link #forNumber(int)} instead.
      */
     @java.lang.Deprecated
-    public static E_Ctrl valueOf(int value) {
+    public static E_DIR valueOf(int value) {
       return forNumber(value);
     }
 
-    public static E_Ctrl forNumber(int value) {
+    public static E_DIR forNumber(int value) {
       switch (value) {
-        case 1: return Left;
-        case 2: return Right;
-        case 3: return Shoot;
+        case 1: return LEFT;
+        case 2: return RIGHT;
+        case 3: return CENTER;
         default: return null;
       }
     }
 
-    public static com.google.protobuf.Internal.EnumLiteMap<E_Ctrl>
+    public static com.google.protobuf.Internal.EnumLiteMap<E_DIR>
         internalGetValueMap() {
       return internalValueMap;
     }
     private static final com.google.protobuf.Internal.EnumLiteMap<
-        E_Ctrl> internalValueMap =
-          new com.google.protobuf.Internal.EnumLiteMap<E_Ctrl>() {
-            public E_Ctrl findValueByNumber(int number) {
-              return E_Ctrl.forNumber(number);
+        E_DIR> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<E_DIR>() {
+            public E_DIR findValueByNumber(int number) {
+              return E_DIR.forNumber(number);
             }
           };
 
@@ -117,9 +117,9 @@ public final class Control {
       return com.proto.Control.getDescriptor().getEnumTypes().get(0);
     }
 
-    private static final E_Ctrl[] VALUES = values();
+    private static final E_DIR[] VALUES = values();
 
-    public static E_Ctrl valueOf(
+    public static E_DIR valueOf(
         com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
       if (desc.getType() != getDescriptor()) {
         throw new java.lang.IllegalArgumentException(
@@ -130,11 +130,11 @@ public final class Control {
 
     private final int value;
 
-    private E_Ctrl(int value) {
+    private E_DIR(int value) {
       this.value = value;
     }
 
-    // @@protoc_insertion_point(enum_scope:E_Ctrl)
+    // @@protoc_insertion_point(enum_scope:E_DIR)
   }
 
   public interface MceControlOrBuilder extends
@@ -142,30 +142,22 @@ public final class Control {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>required .E_Ctrl controlType = 1;</code>
+     * <code>required .E_DIR dir = 1;</code>
      */
-    boolean hasControlType();
+    boolean hasDir();
     /**
-     * <code>required .E_Ctrl controlType = 1;</code>
+     * <code>required .E_DIR dir = 1;</code>
      */
-    com.proto.Control.E_Ctrl getControlType();
+    com.proto.Control.E_DIR getDir();
 
     /**
-     * <pre>
-     * 按下状态
-     * </pre>
-     *
-     * <code>required bool isPressed = 2;</code>
+     * <code>optional bool isMove = 2;</code>
      */
-    boolean hasIsPressed();
+    boolean hasIsMove();
     /**
-     * <pre>
-     * 按下状态
-     * </pre>
-     *
-     * <code>required bool isPressed = 2;</code>
+     * <code>optional bool isMove = 2;</code>
      */
-    boolean getIsPressed();
+    boolean getIsMove();
   }
   /**
    * <pre>
@@ -183,8 +175,8 @@ public final class Control {
       super(builder);
     }
     private MceControl() {
-      controlType_ = 1;
-      isPressed_ = false;
+      dir_ = 1;
+      isMove_ = false;
     }
 
     @java.lang.Override
@@ -217,18 +209,18 @@ public final class Control {
             }
             case 8: {
               int rawValue = input.readEnum();
-              com.proto.Control.E_Ctrl value = com.proto.Control.E_Ctrl.valueOf(rawValue);
+              com.proto.Control.E_DIR value = com.proto.Control.E_DIR.valueOf(rawValue);
               if (value == null) {
                 unknownFields.mergeVarintField(1, rawValue);
               } else {
                 bitField0_ |= 0x00000001;
-                controlType_ = rawValue;
+                dir_ = rawValue;
               }
               break;
             }
             case 16: {
               bitField0_ |= 0x00000002;
-              isPressed_ = input.readBool();
+              isMove_ = input.readBool();
               break;
             }
           }
@@ -256,43 +248,35 @@ public final class Control {
     }
 
     private int bitField0_;
-    public static final int CONTROLTYPE_FIELD_NUMBER = 1;
-    private int controlType_;
+    public static final int DIR_FIELD_NUMBER = 1;
+    private int dir_;
     /**
-     * <code>required .E_Ctrl controlType = 1;</code>
+     * <code>required .E_DIR dir = 1;</code>
      */
-    public boolean hasControlType() {
+    public boolean hasDir() {
       return ((bitField0_ & 0x00000001) == 0x00000001);
     }
     /**
-     * <code>required .E_Ctrl controlType = 1;</code>
+     * <code>required .E_DIR dir = 1;</code>
      */
-    public com.proto.Control.E_Ctrl getControlType() {
-      com.proto.Control.E_Ctrl result = com.proto.Control.E_Ctrl.valueOf(controlType_);
-      return result == null ? com.proto.Control.E_Ctrl.Left : result;
+    public com.proto.Control.E_DIR getDir() {
+      com.proto.Control.E_DIR result = com.proto.Control.E_DIR.valueOf(dir_);
+      return result == null ? com.proto.Control.E_DIR.LEFT : result;
     }
 
-    public static final int ISPRESSED_FIELD_NUMBER = 2;
-    private boolean isPressed_;
+    public static final int ISMOVE_FIELD_NUMBER = 2;
+    private boolean isMove_;
     /**
-     * <pre>
-     * 按下状态
-     * </pre>
-     *
-     * <code>required bool isPressed = 2;</code>
+     * <code>optional bool isMove = 2;</code>
      */
-    public boolean hasIsPressed() {
+    public boolean hasIsMove() {
       return ((bitField0_ & 0x00000002) == 0x00000002);
     }
     /**
-     * <pre>
-     * 按下状态
-     * </pre>
-     *
-     * <code>required bool isPressed = 2;</code>
+     * <code>optional bool isMove = 2;</code>
      */
-    public boolean getIsPressed() {
-      return isPressed_;
+    public boolean getIsMove() {
+      return isMove_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -301,11 +285,7 @@ public final class Control {
       if (isInitialized == 1) return true;
       if (isInitialized == 0) return false;
 
-      if (!hasControlType()) {
-        memoizedIsInitialized = 0;
-        return false;
-      }
-      if (!hasIsPressed()) {
+      if (!hasDir()) {
         memoizedIsInitialized = 0;
         return false;
       }
@@ -316,10 +296,10 @@ public final class Control {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        output.writeEnum(1, controlType_);
+        output.writeEnum(1, dir_);
       }
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
-        output.writeBool(2, isPressed_);
+        output.writeBool(2, isMove_);
       }
       unknownFields.writeTo(output);
     }
@@ -331,11 +311,11 @@ public final class Control {
       size = 0;
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeEnumSize(1, controlType_);
+          .computeEnumSize(1, dir_);
       }
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(2, isPressed_);
+          .computeBoolSize(2, isMove_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -354,14 +334,14 @@ public final class Control {
       com.proto.Control.MceControl other = (com.proto.Control.MceControl) obj;
 
       boolean result = true;
-      result = result && (hasControlType() == other.hasControlType());
-      if (hasControlType()) {
-        result = result && controlType_ == other.controlType_;
+      result = result && (hasDir() == other.hasDir());
+      if (hasDir()) {
+        result = result && dir_ == other.dir_;
       }
-      result = result && (hasIsPressed() == other.hasIsPressed());
-      if (hasIsPressed()) {
-        result = result && (getIsPressed()
-            == other.getIsPressed());
+      result = result && (hasIsMove() == other.hasIsMove());
+      if (hasIsMove()) {
+        result = result && (getIsMove()
+            == other.getIsMove());
       }
       result = result && unknownFields.equals(other.unknownFields);
       return result;
@@ -374,14 +354,14 @@ public final class Control {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptorForType().hashCode();
-      if (hasControlType()) {
-        hash = (37 * hash) + CONTROLTYPE_FIELD_NUMBER;
-        hash = (53 * hash) + controlType_;
+      if (hasDir()) {
+        hash = (37 * hash) + DIR_FIELD_NUMBER;
+        hash = (53 * hash) + dir_;
       }
-      if (hasIsPressed()) {
-        hash = (37 * hash) + ISPRESSED_FIELD_NUMBER;
+      if (hasIsMove()) {
+        hash = (37 * hash) + ISMOVE_FIELD_NUMBER;
         hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-            getIsPressed());
+            getIsMove());
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -505,9 +485,9 @@ public final class Control {
       }
       public Builder clear() {
         super.clear();
-        controlType_ = 1;
+        dir_ = 1;
         bitField0_ = (bitField0_ & ~0x00000001);
-        isPressed_ = false;
+        isMove_ = false;
         bitField0_ = (bitField0_ & ~0x00000002);
         return this;
       }
@@ -536,11 +516,11 @@ public final class Control {
         if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
           to_bitField0_ |= 0x00000001;
         }
-        result.controlType_ = controlType_;
+        result.dir_ = dir_;
         if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
           to_bitField0_ |= 0x00000002;
         }
-        result.isPressed_ = isPressed_;
+        result.isMove_ = isMove_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -583,11 +563,11 @@ public final class Control {
 
       public Builder mergeFrom(com.proto.Control.MceControl other) {
         if (other == com.proto.Control.MceControl.getDefaultInstance()) return this;
-        if (other.hasControlType()) {
-          setControlType(other.getControlType());
+        if (other.hasDir()) {
+          setDir(other.getDir());
         }
-        if (other.hasIsPressed()) {
-          setIsPressed(other.getIsPressed());
+        if (other.hasIsMove()) {
+          setIsMove(other.getIsMove());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -595,10 +575,7 @@ public final class Control {
       }
 
       public final boolean isInitialized() {
-        if (!hasControlType()) {
-          return false;
-        }
-        if (!hasIsPressed()) {
+        if (!hasDir()) {
           return false;
         }
         return true;
@@ -623,86 +600,70 @@ public final class Control {
       }
       private int bitField0_;
 
-      private int controlType_ = 1;
+      private int dir_ = 1;
       /**
-       * <code>required .E_Ctrl controlType = 1;</code>
+       * <code>required .E_DIR dir = 1;</code>
        */
-      public boolean hasControlType() {
+      public boolean hasDir() {
         return ((bitField0_ & 0x00000001) == 0x00000001);
       }
       /**
-       * <code>required .E_Ctrl controlType = 1;</code>
+       * <code>required .E_DIR dir = 1;</code>
        */
-      public com.proto.Control.E_Ctrl getControlType() {
-        com.proto.Control.E_Ctrl result = com.proto.Control.E_Ctrl.valueOf(controlType_);
-        return result == null ? com.proto.Control.E_Ctrl.Left : result;
+      public com.proto.Control.E_DIR getDir() {
+        com.proto.Control.E_DIR result = com.proto.Control.E_DIR.valueOf(dir_);
+        return result == null ? com.proto.Control.E_DIR.LEFT : result;
       }
       /**
-       * <code>required .E_Ctrl controlType = 1;</code>
+       * <code>required .E_DIR dir = 1;</code>
        */
-      public Builder setControlType(com.proto.Control.E_Ctrl value) {
+      public Builder setDir(com.proto.Control.E_DIR value) {
         if (value == null) {
           throw new NullPointerException();
         }
         bitField0_ |= 0x00000001;
-        controlType_ = value.getNumber();
+        dir_ = value.getNumber();
         onChanged();
         return this;
       }
       /**
-       * <code>required .E_Ctrl controlType = 1;</code>
+       * <code>required .E_DIR dir = 1;</code>
        */
-      public Builder clearControlType() {
+      public Builder clearDir() {
         bitField0_ = (bitField0_ & ~0x00000001);
-        controlType_ = 1;
+        dir_ = 1;
         onChanged();
         return this;
       }
 
-      private boolean isPressed_ ;
+      private boolean isMove_ ;
       /**
-       * <pre>
-       * 按下状态
-       * </pre>
-       *
-       * <code>required bool isPressed = 2;</code>
+       * <code>optional bool isMove = 2;</code>
        */
-      public boolean hasIsPressed() {
+      public boolean hasIsMove() {
         return ((bitField0_ & 0x00000002) == 0x00000002);
       }
       /**
-       * <pre>
-       * 按下状态
-       * </pre>
-       *
-       * <code>required bool isPressed = 2;</code>
+       * <code>optional bool isMove = 2;</code>
        */
-      public boolean getIsPressed() {
-        return isPressed_;
+      public boolean getIsMove() {
+        return isMove_;
       }
       /**
-       * <pre>
-       * 按下状态
-       * </pre>
-       *
-       * <code>required bool isPressed = 2;</code>
+       * <code>optional bool isMove = 2;</code>
        */
-      public Builder setIsPressed(boolean value) {
+      public Builder setIsMove(boolean value) {
         bitField0_ |= 0x00000002;
-        isPressed_ = value;
+        isMove_ = value;
         onChanged();
         return this;
       }
       /**
-       * <pre>
-       * 按下状态
-       * </pre>
-       *
-       * <code>required bool isPressed = 2;</code>
+       * <code>optional bool isMove = 2;</code>
        */
-      public Builder clearIsPressed() {
+      public Builder clearIsMove() {
         bitField0_ = (bitField0_ & ~0x00000002);
-        isPressed_ = false;
+        isMove_ = false;
         onChanged();
         return this;
       }
@@ -769,10 +730,10 @@ public final class Control {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\rControl.proto\"=\n\nMceControl\022\034\n\013control" +
-      "Type\030\001 \002(\0162\007.E_Ctrl\022\021\n\tisPressed\030\002 \002(\010*(" +
-      "\n\006E_Ctrl\022\010\n\004Left\020\001\022\t\n\005Right\020\002\022\t\n\005Shoot\020\003" +
-      "B\024\n\tcom.protoB\007Control"
+      "\n\rControl.proto\"1\n\nMceControl\022\023\n\003dir\030\001 \002" +
+      "(\0162\006.E_DIR\022\016\n\006isMove\030\002 \001(\010*(\n\005E_DIR\022\010\n\004L" +
+      "EFT\020\001\022\t\n\005RIGHT\020\002\022\n\n\006CENTER\020\003B\024\n\tcom.prot" +
+      "oB\007Control"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -791,7 +752,7 @@ public final class Control {
     internal_static_MceControl_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_MceControl_descriptor,
-        new java.lang.String[] { "ControlType", "IsPressed", });
+        new java.lang.String[] { "Dir", "IsMove", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

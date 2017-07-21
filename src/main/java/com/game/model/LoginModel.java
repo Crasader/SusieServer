@@ -7,7 +7,6 @@ import com.game.MsgType;
 import com.game.db.DBManager;
 import com.game.db.UserDBCollect;
 import com.proto.Auth;
-import com.proto.UserInfo;
 
 import io.netty.channel.ChannelHandlerContext;
 
@@ -28,18 +27,18 @@ public class LoginModel {
 				System.out.println("id = "+aa.getId());
 				System.out.println("pass = "+aa.getPass());
 				UserDBCollect userDB = DBManager.getInstance().getUserDB();
-				UserDBCollect.UserObj userObj = userDB.getUserDBObj(aa.getId(), aa.getPass());
+				UserDBCollect.UseDB userObj = userDB.getUserDBObj(aa.getId(), aa.getPass());
 				if(null == userObj){
 					userObj = userDB.addUser(aa.getId(), aa.getPass());
 				}
 				
 				String uid = userObj.getUID();
-				System.out.println("uid = "+uid);
 				AccountManager.getInstance().addCtx(ctx , uid);
 				
 				Auth.MseAuth.Builder mseAuth =  Auth.MseAuth.newBuilder();
 				mseAuth.setUid(uid);
 				mseAuth.setSucc(true);
+				mseAuth.setServerTime(System.currentTimeMillis());
 				ctx.writeAndFlush(mseAuth.build());
 			}
 		});
@@ -51,18 +50,8 @@ public class LoginModel {
 			public void handler(Object target, Object data) {
 				ChannelHandlerContext ctx = (ChannelHandlerContext)target;
 				String uid = AccountManager.getInstance().getUIDByCtx(ctx);
-				System.out.println("uid =" + uid);
-				sendUserInfo(ctx , uid);
-				ctx.flush();
+				ModelManager.getInstance().getScene().addUser(uid);
 			}
 		});
 	}
-	
-	private void sendUserInfo(ChannelHandlerContext ctx , String uid){
-		UserInfo.MseUserInfo.Builder builder = UserInfo.MseUserInfo.newBuilder();
-		builder.setUid(uid);
-		builder.setUserName("test");
-		ctx.write(builder.build());
-	}
-	
 }

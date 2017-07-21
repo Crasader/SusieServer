@@ -1,5 +1,8 @@
 package com.core;
 
+import org.apache.logging.log4j.LogManager;
+
+import com.core.handler.CustomOutboundHandler;
 import com.core.handler.CustomProtobufDecoder;
 import com.core.handler.CustomProtobufEncoder;
 import com.core.handler.CutomInboundHandler;
@@ -29,7 +32,7 @@ public class ServerCore {
 		}
 		return ince;
 	}
-	
+	private static org.apache.logging.log4j.Logger SSLog = LogManager.getLogger(ServerCore.class.getName());
 	private ServerCore(){
 		signal = new SignalManager();
 	}
@@ -46,6 +49,7 @@ public class ServerCore {
 
 				@Override
 				protected void initChannel(SocketChannel ch) throws Exception {
+					ch.pipeline().addLast(new CustomOutboundHandler());
 					ch.pipeline().addLast(new CustomProtobufDecoder(customProtoToID));
 					ch.pipeline().addLast(new CustomProtobufEncoder(customProtoToID));
 					ch.pipeline().addLast(new CutomInboundHandler());

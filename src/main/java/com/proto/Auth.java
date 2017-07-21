@@ -867,6 +867,15 @@ public final class Auth {
      * <code>required bool succ = 2;</code>
      */
     boolean getSucc();
+
+    /**
+     * <code>required int64 serverTime = 3;</code>
+     */
+    boolean hasServerTime();
+    /**
+     * <code>required int64 serverTime = 3;</code>
+     */
+    long getServerTime();
   }
   /**
    * Protobuf type {@code MseAuth}
@@ -882,6 +891,7 @@ public final class Auth {
     private MseAuth() {
       uid_ = "";
       succ_ = false;
+      serverTime_ = 0L;
     }
 
     @java.lang.Override
@@ -921,6 +931,11 @@ public final class Auth {
             case 16: {
               bitField0_ |= 0x00000002;
               succ_ = input.readBool();
+              break;
+            }
+            case 24: {
+              bitField0_ |= 0x00000004;
+              serverTime_ = input.readInt64();
               break;
             }
           }
@@ -1005,6 +1020,21 @@ public final class Auth {
       return succ_;
     }
 
+    public static final int SERVERTIME_FIELD_NUMBER = 3;
+    private long serverTime_;
+    /**
+     * <code>required int64 serverTime = 3;</code>
+     */
+    public boolean hasServerTime() {
+      return ((bitField0_ & 0x00000004) == 0x00000004);
+    }
+    /**
+     * <code>required int64 serverTime = 3;</code>
+     */
+    public long getServerTime() {
+      return serverTime_;
+    }
+
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
@@ -1016,6 +1046,10 @@ public final class Auth {
         return false;
       }
       if (!hasSucc()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasServerTime()) {
         memoizedIsInitialized = 0;
         return false;
       }
@@ -1031,6 +1065,9 @@ public final class Auth {
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
         output.writeBool(2, succ_);
       }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        output.writeInt64(3, serverTime_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -1045,6 +1082,10 @@ public final class Auth {
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(2, succ_);
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(3, serverTime_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -1073,6 +1114,11 @@ public final class Auth {
         result = result && (getSucc()
             == other.getSucc());
       }
+      result = result && (hasServerTime() == other.hasServerTime());
+      if (hasServerTime()) {
+        result = result && (getServerTime()
+            == other.getServerTime());
+      }
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -1092,6 +1138,11 @@ public final class Auth {
         hash = (37 * hash) + SUCC_FIELD_NUMBER;
         hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
             getSucc());
+      }
+      if (hasServerTime()) {
+        hash = (37 * hash) + SERVERTIME_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getServerTime());
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -1215,6 +1266,8 @@ public final class Auth {
         bitField0_ = (bitField0_ & ~0x00000001);
         succ_ = false;
         bitField0_ = (bitField0_ & ~0x00000002);
+        serverTime_ = 0L;
+        bitField0_ = (bitField0_ & ~0x00000004);
         return this;
       }
 
@@ -1247,6 +1300,10 @@ public final class Auth {
           to_bitField0_ |= 0x00000002;
         }
         result.succ_ = succ_;
+        if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
+          to_bitField0_ |= 0x00000004;
+        }
+        result.serverTime_ = serverTime_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -1297,6 +1354,9 @@ public final class Auth {
         if (other.hasSucc()) {
           setSucc(other.getSucc());
         }
+        if (other.hasServerTime()) {
+          setServerTime(other.getServerTime());
+        }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -1307,6 +1367,9 @@ public final class Auth {
           return false;
         }
         if (!hasSucc()) {
+          return false;
+        }
+        if (!hasServerTime()) {
           return false;
         }
         return true;
@@ -1438,6 +1501,38 @@ public final class Auth {
         onChanged();
         return this;
       }
+
+      private long serverTime_ ;
+      /**
+       * <code>required int64 serverTime = 3;</code>
+       */
+      public boolean hasServerTime() {
+        return ((bitField0_ & 0x00000004) == 0x00000004);
+      }
+      /**
+       * <code>required int64 serverTime = 3;</code>
+       */
+      public long getServerTime() {
+        return serverTime_;
+      }
+      /**
+       * <code>required int64 serverTime = 3;</code>
+       */
+      public Builder setServerTime(long value) {
+        bitField0_ |= 0x00000004;
+        serverTime_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required int64 serverTime = 3;</code>
+       */
+      public Builder clearServerTime() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        serverTime_ = 0L;
+        onChanged();
+        return this;
+      }
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFields(unknownFields);
@@ -1507,8 +1602,9 @@ public final class Auth {
   static {
     java.lang.String[] descriptorData = {
       "\n\nAuth.proto\"#\n\007MceAuth\022\n\n\002id\030\001 \002(\t\022\014\n\004p" +
-      "ass\030\002 \002(\t\"$\n\007MseAuth\022\013\n\003uid\030\001 \002(\t\022\014\n\004suc" +
-      "c\030\002 \002(\010B\021\n\tcom.protoB\004Auth"
+      "ass\030\002 \002(\t\"8\n\007MseAuth\022\013\n\003uid\030\001 \002(\t\022\014\n\004suc" +
+      "c\030\002 \002(\010\022\022\n\nserverTime\030\003 \002(\003B\021\n\tcom.proto" +
+      "B\004Auth"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -1533,7 +1629,7 @@ public final class Auth {
     internal_static_MseAuth_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_MseAuth_descriptor,
-        new java.lang.String[] { "Uid", "Succ", });
+        new java.lang.String[] { "Uid", "Succ", "ServerTime", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

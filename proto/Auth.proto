@@ -11,4 +11,5 @@ message MceAuth {
 message MseAuth {
     required string uid = 1;
     required bool  succ = 2;
+    required int64 serverTime = 3;
 }

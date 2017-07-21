@@ -1,5 +1,6 @@
 package com.core.message;
 
-public interface ISignalHandler {
-	void handler(Object target , Object data);
+public abstract class ISignalHandler {
+	public String msgName = "null";
+	public abstract void handler(Object target , Object data);
 }

@@ -1,12 +1,12 @@
 package com.core.message;
 
-import java.util.LinkedList;
 import java.util.Queue;
+import java.util.concurrent.ConcurrentLinkedQueue;
 
 public class MessageQueue {
 	private Queue<Message> msgQueue;
 	public MessageQueue(){
-		msgQueue = new LinkedList<>();
+		msgQueue = new ConcurrentLinkedQueue<>();
 	}
 	
 	public void addMessage(Message message){

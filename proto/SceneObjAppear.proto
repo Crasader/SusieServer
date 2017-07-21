@@ -1,0 +1,25 @@
+syntax = "proto2";
+
+option java_package = "com.proto";
+option java_outer_classname = "SceneObjAppear";
+
+//场景中的怪物信息
+message MseSceneObjAppear{    
+  	required string uid    		= 1;
+	required float x 			= 2;
+	required float y      		= 3; 
+	required float degree 		= 4; // 角度
+	required float speed 		= 5;
+  	required float degreeSpeed 	= 6;
+}
+// 场景中的怪物列表
+message MseSceneObjAppearList{
+	repeated MseSceneObjAppear sceneObjAppear = 1;
+}
+
+
+
+
+
+
+

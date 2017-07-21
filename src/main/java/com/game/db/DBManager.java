@@ -1,6 +1,8 @@
 package com.game.db;
 
 import java.net.UnknownHostException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 import org.bson.Document;
 
@@ -15,7 +17,7 @@ public class DBManager {
 	private MongoDatabase db;
 	// 数据库
 	private UserDBCollect userDB;
-	
+	private SceneNodeDBCollect sceneNodeDB;
 	public static DBManager getInstance(){
 		if(null == ince) {
 			ince = new DBManager();
@@ -25,9 +27,14 @@ public class DBManager {
 	
 	public void start() throws UnknownHostException{
 		mc = new MongoClient(GameConfig.DBIP , GameConfig.DBPort);
+		
 		db = mc.getDatabase(GameConfig.DBName);
 		
 		userDB = new UserDBCollect(this);
+		sceneNodeDB = new SceneNodeDBCollect(this);
+		
+		Logger mongoLogger = Logger.getLogger( "org.mongodb.driver" );
+		mongoLogger.setLevel(Level.SEVERE);
 	}
 	
 	public void stop(){
@@ -52,6 +59,10 @@ public class DBManager {
 	// 数据库
 	public UserDBCollect getUserDB(){
 		return userDB;
+	}
+	
+	public SceneNodeDBCollect getSceneNodeDB(){
+		return sceneNodeDB;
 	}
 	
 	

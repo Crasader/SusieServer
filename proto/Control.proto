@@ -2,15 +2,15 @@ syntax = "proto2";
 
 option java_package = "com.proto";
 option java_outer_classname = "Control";
-enum E_Ctrl{
-	Left  = 1;  //按了左键
-	Right = 2; //按了右键
-	Shoot = 3; //射击键
+enum E_DIR{
+	LEFT  = 1;  //左移动
+	RIGHT = 2; 	//右移动
+	CENTER = 3; //回中
 }
 
 // 控制协议
 message MceControl {    
-	required E_Ctrl controlType = 1;
-	required bool isPressed     = 2; // 按下状态
+	required E_DIR dir = 1;
+	optional bool isMove = 2;
 }
 

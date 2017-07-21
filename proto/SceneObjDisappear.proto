@@ -1,0 +1,20 @@
+syntax = "proto2";
+
+option java_package = "com.proto";
+option java_outer_classname = "SceneObjDisappear";
+
+//场景中的怪物信息
+message MseSceneObjDisappear{    
+  	required string uid = 1;
+}
+// 场景中的怪物列表
+message MseSceneObjDisappearList{
+	repeated MseSceneObjDisappear sceneObjDisappear = 1;
+}
+
+
+
+
+
+
+

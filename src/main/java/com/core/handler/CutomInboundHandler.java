@@ -19,18 +19,16 @@ public class CutomInboundHandler extends ChannelInboundHandlerAdapter{
 
 	@Override
 	public void channelRead(ChannelHandlerContext ctx, Object msg) throws Exception {
-		System.out.println("read = " + msg.getClass().getName());
 		if (msg instanceof ProtoData) {
 			ProtoData pData = (ProtoData) msg;
 			String msgName = "proto_" + pData.msgType; 
+			System.out.println("msgName = " + msgName);
 			ServerCore.getInstance().getSignal().addDelayMessage(new Message(msgName , ctx, pData.msgData));
 		}
 	}
 
 	@Override
 	public void channelInactive(ChannelHandlerContext ctx) throws Exception {
-		// TODO Auto-generated method stub
-		System.out.println("inactive = " + ctx.name());
 		AccountManager.getInstance().closeCtx(ctx);
 	}
 

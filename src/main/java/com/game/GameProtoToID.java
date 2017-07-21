@@ -7,7 +7,9 @@ import com.proto.Auth;
 import com.proto.Control;
 import com.proto.EnterGame;
 import com.proto.Heartbeat;
-import com.proto.Move;
+import com.proto.SceneObjAppear;
+import com.proto.SceneObjDisappear;
+import com.proto.SceneObjMove;
 ////client
 //MceAuth = 1
 //MceControl = 2
@@ -33,10 +35,20 @@ public class GameProtoToID implements IProtoToID {
 			messageType = MsgType.MseEnterGame;
 		}else if(msg instanceof Heartbeat.MseHeartbeat){
 			messageType = MsgType.MseHeartbeat;
-		}else if(msg instanceof Move.MseMove){
-			messageType = MsgType.MseMove;
 		}else if(msg instanceof UserInfo.MseUserInfo){
 			messageType = MsgType.MseUserInfo;
+		}else if(msg instanceof SceneObjAppear.MseSceneObjAppear){
+			messageType = MsgType.MseSceneObjAppear;
+		}else if(msg instanceof SceneObjAppear.MseSceneObjAppearList){
+			messageType = MsgType.MseSceneObjAppearList;
+		}else if(msg instanceof SceneObjMove.MseSceneObjMove){
+			messageType = MsgType.MseSceneObjMove;
+		}else if(msg instanceof SceneObjMove.MseSceneObjMoveList){
+			messageType = MsgType.MseSceneObjMoveList;
+		}else if(msg instanceof SceneObjDisappear.MseSceneObjDisappear){
+			messageType = MsgType.MseSceneObjDisappear;
+		}else if(msg instanceof SceneObjDisappear.MseSceneObjDisappearList){
+			messageType = MsgType.MseSceneObjDisappearList;
 		}
 		return messageType;
 	}

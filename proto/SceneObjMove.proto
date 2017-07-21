@@ -1,0 +1,33 @@
+syntax = "proto2";
+
+option java_package = "com.proto";
+option java_outer_classname = "SceneObjMove";
+
+enum E_SceneObjMoveS
+{
+	STOP = 1;//停止
+	STOP_AND_ROTATE = 2;//原地转
+	MOVE = 3;//移动不转向
+	MOVE_AND_ROTATE = 4;//移动并转向
+}
+//场景中的怪物信息
+message MseSceneObjMove{    
+  	required string uid = 1;
+  	required E_SceneObjMoveS status = 2;
+  	required int64 endTime = 3;          // 结束时间
+	optional float posX = 4;			 // 坐标x
+	optional float posY = 5;			 // 坐标y
+	optional float currentDegree = 6;
+	optional float targetDegree = 7;
+}
+// 场景中的怪物列表
+message MseSceneObjMoveList{
+	repeated MseSceneObjMove sceneObjMove = 1;
+}
+
+
+
+
+
+
+

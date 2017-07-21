@@ -2,8 +2,9 @@ package com.core.handler;
 
 import java.util.List;
 
+import org.apache.logging.log4j.LogManager;
+
 import com.core.net.IProtoToID;
-import com.core.util.SSLog;
 import com.google.protobuf.GeneratedMessageV3;
 import com.google.protobuf.MessageLite;
 
@@ -16,6 +17,7 @@ import io.netty.handler.codec.ByteToMessageDecoder;
  */
 
 public class CustomProtobufDecoder extends ByteToMessageDecoder {
+	private static org.apache.logging.log4j.Logger LOG = LogManager.getLogger(CustomProtobufDecoder.class.getName());
 	private IProtoToID customProtoToID;
 
 	public CustomProtobufDecoder(IProtoToID customProtoToID) {
@@ -61,9 +63,8 @@ public class CustomProtobufDecoder extends ByteToMessageDecoder {
 			if (null != result) {
 				out.add(new ProtoData(msgType, result));
 			} else {
-				SSLog.Error("can't get msg by type :" + msgType);
+				LOG.error("can't get msg by type :" + msgType);
 			}
-
 		}
 	}
 
